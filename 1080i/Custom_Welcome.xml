@@ -1,0 +1,30 @@
+<window id="1100" type="dialog">
+  <defaultcontrol>2</defaultcontrol>
+  <coordinates>
+    <left>200</left>
+    <top>100</top>
+  </coordinates>
+  <controls>
+  	<control type="label" id="1">
+					<description>My First label</description>
+					<left>80</left>
+					<top>60</top>
+					<width>250</width>
+					<visible>true</visible>
+					<align>center</align>
+					<aligny>center</aligny>
+					<scroll>false</scroll>
+					<label>6</label>
+					<info>MusicPlayer.Artist</info>
+					<number></number>
+					<angle>30</angle>
+					<haspath>false</haspath>
+					<font>font14</font>
+					<textcolor>FFB2D4F5</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<wrapmultiline>false</wrapmultiline>
+					<scrollspeed>50</scrollspeed>
+					<scrollsuffix> - </scrollsuffix>
+		</control>
+  </controls>
+</window>

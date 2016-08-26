@@ -1,0 +1,2125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<includes>
+	<include name="skinshortcuts-mainmenu">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>Islamic Content</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb>/Users/measaura/Desktop/Masjid-Putra-Putrajaya.jpg</thumb>
+			<property name="labelID">islamiccontent</property>
+			<property name="defaultID" />
+			<property name="background">/Users/measaura/Desktop/chechnya_sunset_sky_mosque_59595_1920x1080.jpg</property>
+			<property name="backgroundName">/Users/measaura/Desktop/chechnya_sunset_sky_mosque_59595_1920x1080.jpg</property>
+			<onclick>ActivateWindow(1180)</onclick>
+			<property name="path">ActivateWindow(1180)</property>
+			<property name="list">1180</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">islamiccontent</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$ADDON[script.skinshortcuts 32022]</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/Tv.jpg</icon>
+			<thumb />
+			<property name="labelID">livetv</property>
+			<property name="defaultID">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetName">19017</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="background">Tv.Art</property>
+			<property name="widget.1">tvchannels</property>
+			<property name="widgetTarget.1">pvr</property>
+			<property name="widgetType.1">pvr</property>
+			<property name="widgetPath.1">pvr://channels/tv/all channel/;reload=$INFO[Window(Home).Property(widgetreload2)]</property>
+			<property name="widgetName.1">19023</property>
+			<visible>PVR.HasTVChannels</visible>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+			<property name="path">ActivateWindow(TVChannels)</property>
+			<property name="list">TVChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">livetv</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Welcome</label>
+			<label2>Common menu item</label2>
+			<icon>$VAR[WeatherFanartPath]$INFO[Weather.fanartcode].jpg</icon>
+			<thumb />
+			<property name="labelID">welcome</property>
+			<property name="defaultID">weather</property>
+			<property name="background">Weather.Art</property>
+			<property name="translatedPath">ActivateWindow(Weather)</property>
+			<visible>!IsEmpty(Weather.Plugin)</visible>
+			<onclick>ActivateWindow(Weather)</onclick>
+			<property name="path">ActivateWindow(Weather)</property>
+			<property name="list">Weather</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">welcome</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>Radio</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/Radio.jpg</icon>
+			<thumb />
+			<property name="labelID">plugin.audio.sgradio</property>
+			<property name="defaultID">music</property>
+			<property name="background">Radio.Art</property>
+			<property name="background">Music.Art</property>
+			<property name="widget">Addon</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<onclick>ActivateWindow(Music,"plugin://plugin.audio.sgradio",return)</onclick>
+			<property name="path">ActivateWindow(Music,"plugin://plugin.audio.sgradio",return)</property>
+			<property name="list">plugin://plugin.audio.sgradio</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">plugin-audio-sgradio</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>Services</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb>/Users/measaura/Desktop/blackglassnova_SKIN_BACKUP_20160801-0727/skinshortcuts/skin.blackglassnova-thumb-Services.jpg</thumb>
+			<property name="labelID">services</property>
+			<property name="defaultID" />
+			<property name="background">special://profile/addon_data/script.skinshortcuts/skin.blackglassnova-background-services.jpg</property>
+			<property name="backgroundName">concierge.jpg</property>
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">services</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>Karaoke</label>
+			<label2>Music Add-On</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb>/Users/measaura/Desktop/blackglassnova_SKIN_BACKUP_20160801-0727/skinshortcuts/skin.blackglassnova-thumb-Karaoke.png</thumb>
+			<property name="labelID">karaoke</property>
+			<property name="defaultID" />
+			<property name="translatedPath">ActivateWindow(MusicLibrary,"plugin://plugin.video.MikeysKaraoke/?url=url&amp;mode=19&amp;name=%5BCOLOR+blue%5DYoutube%5B%2FCOLOR%5D+Karaoke&amp;iconimage=%2Fhome%2Fosmc%2F.kodi%2Faddons%2Fplugin.video.MikeysKaraoke%2FKaraokeArt%2FMain%2Fyoutube.png&amp;fanart=none&amp;number=1",return)</property>
+			<property name="widget">Addon</property>
+			<property name="widgetName">Karaoke - Browse Artist</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.video.MikeysKaraoke/?url=http%3A%2F%2Fwww.lyricsmania.com%2Flyrics%2F%25s.html&amp;mode=1&amp;name=%5BCOLOR+blue%5DBrowse%5B%2FCOLOR%5D+Artist&amp;iconimage=%2Fhome%2Fosmc%2F.kodi%2Faddons%2Fplugin.video.MikeysKaraoke%2FKaraokeArt%2FMain%2FArtist.png&amp;fanart=none&amp;number=4&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="background">special://profile/addon_data/script.skinshortcuts/skin.blackglassnova-background-karaoke.png</property>
+			<property name="backgroundName">microphone_metal_mesh_1920x1080.png</property>
+			<onclick>ActivateWindow(Music,"plugin://plugin.video.MikeysKaraoke/?url=url&amp;mode=19&amp;name=%5BCOLOR+blue%5DYoutube%5B%2FCOLOR%5D+Karaoke&amp;iconimage=%2Fhome%2Fosmc%2F.kodi%2Faddons%2Fplugin.video.MikeysKaraoke%2FKaraokeArt%2FMain%2Fyoutube.png&amp;fanart=none&amp;number=1",return)</onclick>
+			<property name="path">ActivateWindow(Music,"plugin://plugin.video.MikeysKaraoke/?url=url&amp;mode=19&amp;name=%5BCOLOR+blue%5DYoutube%5B%2FCOLOR%5D+Karaoke&amp;iconimage=%2Fhome%2Fosmc%2F.kodi%2Faddons%2Fplugin.video.MikeysKaraoke%2FKaraokeArt%2FMain%2Fyoutube.png&amp;fanart=none&amp;number=1",return)</property>
+			<property name="list">plugin://plugin.video.MikeysKaraoke/?url=url&amp;mode=19&amp;name=%5BCOLOR+blue%5DYoutube%5B%2FCOLOR%5D+Karaoke&amp;iconimage=%2Fhome%2Fosmc%2F.kodi%2Faddons%2Fplugin.video.MikeysKaraoke%2FKaraokeArt%2FMain%2Fyoutube.png&amp;fanart=none&amp;number=1</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">karaoke</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<label>$LOCALIZE[10004]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/Settings.jpg</icon>
+			<thumb />
+			<property name="labelID">settings</property>
+			<property name="defaultID">settings</property>
+			<property name="background">Settings.Art</property>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">settings</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<label>Signage 1</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">signage1</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1199)</onclick>
+			<property name="path">ActivateWindow(1199)</property>
+			<property name="list">1199</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">signage1</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
+			<label>Signage 2</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">signage2</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1189)</onclick>
+			<property name="path">ActivateWindow(1189)</property>
+			<property name="list">1189</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">signage2</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+	</include>
+	<include />
+	<include name="skinshortcuts-submenu">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>Prayer Time</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">prayertime</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1180)</onclick>
+			<property name="path">ActivateWindow(1180)</property>
+			<property name="list">1180</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),islamiccontent)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>Hadith Of The Day</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">hadithoftheday</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),islamiccontent)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Al-Quran Recital</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">al-quranrecital</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(Music,special://musicplaylists/,return)</onclick>
+			<property name="path">ActivateWindow(Music,special://musicplaylists/,return)</property>
+			<property name="list">special://musicplaylists/</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),islamiccontent)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>$LOCALIZE[19019]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19019</property>
+			<property name="defaultID">19019</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Container(300).ListItem.Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+			<property name="path">ActivateWindow(TVChannels)</property>
+			<property name="list">TVChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[22020]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Container(300).ListItem.Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVGuide)</onclick>
+			<property name="path">ActivateWindow(TVGuide)</property>
+			<property name="list">TVGuide</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[19163]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Container(300).ListItem.Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVRecordings)</onclick>
+			<property name="path">ActivateWindow(TVRecordings)</property>
+			<property name="list">TVRecordings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[19040]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Container(300).ListItem.Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVTimers)</onclick>
+			<property name="path">ActivateWindow(TVTimers)</property>
+			<property name="list">TVTimers</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>$LOCALIZE[137]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Container(300).ListItem.Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVSearch)</onclick>
+			<property name="path">ActivateWindow(TVSearch)</property>
+			<property name="list">TVSearch</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<onclick>ActivateWindow(Music,Artists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Artists,return)</property>
+			<property name="list">Artists</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[132]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">132</property>
+			<property name="defaultID">132</property>
+			<onclick>ActivateWindow(Music,Albums,return)</onclick>
+			<property name="path">ActivateWindow(Music,Albums,return)</property>
+			<property name="list">Albums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[134]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">134</property>
+			<property name="defaultID">134</property>
+			<onclick>ActivateWindow(Music,Songs,return)</onclick>
+			<property name="path">ActivateWindow(Music,Songs,return)</property>
+			<property name="list">Songs</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[744]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">744</property>
+			<property name="defaultID">744</property>
+			<onclick>ActivateWindow(Music,Files,Return)</onclick>
+			<property name="path">ActivateWindow(Music,Files,Return)</property>
+			<property name="list">Files</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>$LOCALIZE[15100]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">15100</property>
+			<property name="defaultID">15100</property>
+			<onclick>ActivateWindow(Music,MusicLibrary,return)</onclick>
+			<property name="path">ActivateWindow(Music,MusicLibrary,return)</property>
+			<property name="list">MusicLibrary</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>$LOCALIZE[1038]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">1038</property>
+			<property name="defaultID">1038</property>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Music,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>Dining</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">dining</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1197)</onclick>
+			<property name="path">ActivateWindow(1197)</property>
+			<property name="list">1197</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>Laundry</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">laundry</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1196)</onclick>
+			<property name="path">ActivateWindow(1196)</property>
+			<property name="list">1196</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Room Service</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">roomservice</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1195)</onclick>
+			<property name="path">ActivateWindow(1195)</property>
+			<property name="list">1195</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>Concierge</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">concierge</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1194)</onclick>
+			<property name="path">ActivateWindow(1194)</property>
+			<property name="list">1194</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>Enquiry</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">enquiry</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1193)</onclick>
+			<property name="path">ActivateWindow(1193)</property>
+			<property name="list">1193</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>Bulletin Board</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">bulletinboard</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1192)</onclick>
+			<property name="path">ActivateWindow(1192)</property>
+			<property name="list">1192</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>My OSMC</label>
+			<label2>Program</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb>image://%2fusr%2fshare%2fkodi%2faddons%2fservice.osmc.settings%2ficon.png/</thumb>
+			<property name="labelID">service.osmc.settings</property>
+			<property name="defaultID">service.osmc.settings</property>
+			<property name="translatedPath">RunAddOn(service.osmc.settings)</property>
+			<onclick>RunAddOn(service.osmc.settings)</onclick>
+			<property name="path">RunAddOn(service.osmc.settings)</property>
+			<property name="list">RunAddOn(service.osmc.settings)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[7]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">7</property>
+			<property name="defaultID">7</property>
+			<onclick>ActivateWindow(filemanager)</onclick>
+			<property name="path">ActivateWindow(filemanager)</property>
+			<property name="list">filemanager</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[130]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">130</property>
+			<property name="defaultID">130</property>
+			<onclick>ActivateWindow(systeminfo)</onclick>
+			<property name="path">ActivateWindow(systeminfo)</property>
+			<property name="list">systeminfo</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[13200]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">13200</property>
+			<property name="defaultID">13200</property>
+			<onclick>ActivateWindow(profiles)</onclick>
+			<property name="path">ActivateWindow(profiles)</property>
+			<property name="list">profiles</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-allmenus">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>Islamic Content</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb>/Users/measaura/Desktop/Masjid-Putra-Putrajaya.jpg</thumb>
+			<property name="labelID">islamiccontent</property>
+			<property name="defaultID" />
+			<property name="background">/Users/measaura/Desktop/chechnya_sunset_sky_mosque_59595_1920x1080.jpg</property>
+			<property name="backgroundName">/Users/measaura/Desktop/chechnya_sunset_sky_mosque_59595_1920x1080.jpg</property>
+			<onclick condition="StringCompare(Window(10000).Property(submenuVisibility),islamiccontent)">ActivateWindow(1180)</onclick>
+			<property name="path">ActivateWindow(1180)</property>
+			<property name="list">1180</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">islamiccontent</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+			<onclick>SetProperty(submenuVisibility,islamiccontent,10000)</onclick>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>Prayer Time</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">prayertime</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1180)</onclick>
+			<property name="path">ActivateWindow(1180)</property>
+			<property name="list">1180</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),islamiccontent)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">islamiccontent</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>Hadith Of The Day</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">hadithoftheday</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),islamiccontent)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">islamiccontent</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Al-Quran Recital</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">al-quranrecital</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(Music,special://musicplaylists/,return)</onclick>
+			<property name="path">ActivateWindow(Music,special://musicplaylists/,return)</property>
+			<property name="list">special://musicplaylists/</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),islamiccontent)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">islamiccontent</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$ADDON[script.skinshortcuts 32022]</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/Tv.jpg</icon>
+			<thumb />
+			<property name="labelID">livetv</property>
+			<property name="defaultID">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetName">19017</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="background">Tv.Art</property>
+			<property name="widget.1">tvchannels</property>
+			<property name="widgetTarget.1">pvr</property>
+			<property name="widgetType.1">pvr</property>
+			<property name="widgetPath.1">pvr://channels/tv/all channel/;reload=$INFO[Window(Home).Property(widgetreload2)]</property>
+			<property name="widgetName.1">19023</property>
+			<visible>PVR.HasTVChannels</visible>
+			<onclick condition="StringCompare(Window(10000).Property(submenuVisibility),livetv)">ActivateWindow(TVChannels)</onclick>
+			<property name="path">ActivateWindow(TVChannels)</property>
+			<property name="list">TVChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">livetv</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+			<onclick>SetProperty(submenuVisibility,livetv,10000)</onclick>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>$LOCALIZE[19019]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19019</property>
+			<property name="defaultID">19019</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+			<property name="path">ActivateWindow(TVChannels)</property>
+			<property name="list">TVChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">livetv</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[22020]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVGuide)</onclick>
+			<property name="path">ActivateWindow(TVGuide)</property>
+			<property name="list">TVGuide</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">livetv</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[19163]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVRecordings)</onclick>
+			<property name="path">ActivateWindow(TVRecordings)</property>
+			<property name="list">TVRecordings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">livetv</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[19040]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVTimers)</onclick>
+			<property name="path">ActivateWindow(TVTimers)</property>
+			<property name="list">TVTimers</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">livetv</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>$LOCALIZE[137]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVSearch)</onclick>
+			<property name="path">ActivateWindow(TVSearch)</property>
+			<property name="list">TVSearch</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">livetv</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Welcome</label>
+			<label2>Common menu item</label2>
+			<icon>$VAR[WeatherFanartPath]$INFO[Weather.fanartcode].jpg</icon>
+			<thumb />
+			<property name="labelID">welcome</property>
+			<property name="defaultID">weather</property>
+			<property name="background">Weather.Art</property>
+			<property name="translatedPath">ActivateWindow(Weather)</property>
+			<visible>!IsEmpty(Weather.Plugin)</visible>
+			<onclick>ActivateWindow(Weather)</onclick>
+			<property name="path">ActivateWindow(Weather)</property>
+			<property name="list">Weather</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">welcome</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>Radio</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/Radio.jpg</icon>
+			<thumb />
+			<property name="labelID">plugin.audio.sgradio</property>
+			<property name="defaultID">music</property>
+			<property name="background">Radio.Art</property>
+			<property name="background">Music.Art</property>
+			<property name="widget">Addon</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<onclick condition="StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)">ActivateWindow(Music,"plugin://plugin.audio.sgradio",return)</onclick>
+			<property name="path">ActivateWindow(Music,"plugin://plugin.audio.sgradio",return)</property>
+			<property name="list">plugin://plugin.audio.sgradio</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">plugin-audio-sgradio</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+			<onclick>SetProperty(submenuVisibility,plugin-audio-sgradio,10000)</onclick>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<onclick>ActivateWindow(Music,Artists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Artists,return)</property>
+			<property name="list">Artists</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">plugin-audio-sgradio</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[132]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">132</property>
+			<property name="defaultID">132</property>
+			<onclick>ActivateWindow(Music,Albums,return)</onclick>
+			<property name="path">ActivateWindow(Music,Albums,return)</property>
+			<property name="list">Albums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">plugin-audio-sgradio</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[134]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">134</property>
+			<property name="defaultID">134</property>
+			<onclick>ActivateWindow(Music,Songs,return)</onclick>
+			<property name="path">ActivateWindow(Music,Songs,return)</property>
+			<property name="list">Songs</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">plugin-audio-sgradio</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[744]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">744</property>
+			<property name="defaultID">744</property>
+			<onclick>ActivateWindow(Music,Files,Return)</onclick>
+			<property name="path">ActivateWindow(Music,Files,Return)</property>
+			<property name="list">Files</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">plugin-audio-sgradio</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>$LOCALIZE[15100]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">15100</property>
+			<property name="defaultID">15100</property>
+			<onclick>ActivateWindow(Music,MusicLibrary,return)</onclick>
+			<property name="path">ActivateWindow(Music,MusicLibrary,return)</property>
+			<property name="list">MusicLibrary</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">plugin-audio-sgradio</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>$LOCALIZE[1038]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">1038</property>
+			<property name="defaultID">1038</property>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Music,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">plugin-audio-sgradio</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>Services</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb>/Users/measaura/Desktop/blackglassnova_SKIN_BACKUP_20160801-0727/skinshortcuts/skin.blackglassnova-thumb-Services.jpg</thumb>
+			<property name="labelID">services</property>
+			<property name="defaultID" />
+			<property name="background">special://profile/addon_data/script.skinshortcuts/skin.blackglassnova-background-services.jpg</property>
+			<property name="backgroundName">concierge.jpg</property>
+			<onclick condition="StringCompare(Window(10000).Property(submenuVisibility),services)">noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">services</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+			<onclick>SetProperty(submenuVisibility,services,10000)</onclick>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>Dining</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">dining</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1197)</onclick>
+			<property name="path">ActivateWindow(1197)</property>
+			<property name="list">1197</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">services</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>Laundry</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">laundry</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1196)</onclick>
+			<property name="path">ActivateWindow(1196)</property>
+			<property name="list">1196</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">services</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Room Service</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">roomservice</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1195)</onclick>
+			<property name="path">ActivateWindow(1195)</property>
+			<property name="list">1195</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">services</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>Concierge</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">concierge</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1194)</onclick>
+			<property name="path">ActivateWindow(1194)</property>
+			<property name="list">1194</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">services</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>Enquiry</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">enquiry</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1193)</onclick>
+			<property name="path">ActivateWindow(1193)</property>
+			<property name="list">1193</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">services</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>Bulletin Board</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">bulletinboard</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1192)</onclick>
+			<property name="path">ActivateWindow(1192)</property>
+			<property name="list">1192</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">services</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>Karaoke</label>
+			<label2>Music Add-On</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb>/Users/measaura/Desktop/blackglassnova_SKIN_BACKUP_20160801-0727/skinshortcuts/skin.blackglassnova-thumb-Karaoke.png</thumb>
+			<property name="labelID">karaoke</property>
+			<property name="defaultID" />
+			<property name="translatedPath">ActivateWindow(MusicLibrary,"plugin://plugin.video.MikeysKaraoke/?url=url&amp;mode=19&amp;name=%5BCOLOR+blue%5DYoutube%5B%2FCOLOR%5D+Karaoke&amp;iconimage=%2Fhome%2Fosmc%2F.kodi%2Faddons%2Fplugin.video.MikeysKaraoke%2FKaraokeArt%2FMain%2Fyoutube.png&amp;fanart=none&amp;number=1",return)</property>
+			<property name="widget">Addon</property>
+			<property name="widgetName">Karaoke - Browse Artist</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.video.MikeysKaraoke/?url=http%3A%2F%2Fwww.lyricsmania.com%2Flyrics%2F%25s.html&amp;mode=1&amp;name=%5BCOLOR+blue%5DBrowse%5B%2FCOLOR%5D+Artist&amp;iconimage=%2Fhome%2Fosmc%2F.kodi%2Faddons%2Fplugin.video.MikeysKaraoke%2FKaraokeArt%2FMain%2FArtist.png&amp;fanart=none&amp;number=4&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="background">special://profile/addon_data/script.skinshortcuts/skin.blackglassnova-background-karaoke.png</property>
+			<property name="backgroundName">microphone_metal_mesh_1920x1080.png</property>
+			<onclick>ActivateWindow(Music,"plugin://plugin.video.MikeysKaraoke/?url=url&amp;mode=19&amp;name=%5BCOLOR+blue%5DYoutube%5B%2FCOLOR%5D+Karaoke&amp;iconimage=%2Fhome%2Fosmc%2F.kodi%2Faddons%2Fplugin.video.MikeysKaraoke%2FKaraokeArt%2FMain%2Fyoutube.png&amp;fanart=none&amp;number=1",return)</onclick>
+			<property name="path">ActivateWindow(Music,"plugin://plugin.video.MikeysKaraoke/?url=url&amp;mode=19&amp;name=%5BCOLOR+blue%5DYoutube%5B%2FCOLOR%5D+Karaoke&amp;iconimage=%2Fhome%2Fosmc%2F.kodi%2Faddons%2Fplugin.video.MikeysKaraoke%2FKaraokeArt%2FMain%2Fyoutube.png&amp;fanart=none&amp;number=1",return)</property>
+			<property name="list">plugin://plugin.video.MikeysKaraoke/?url=url&amp;mode=19&amp;name=%5BCOLOR+blue%5DYoutube%5B%2FCOLOR%5D+Karaoke&amp;iconimage=%2Fhome%2Fosmc%2F.kodi%2Faddons%2Fplugin.video.MikeysKaraoke%2FKaraokeArt%2FMain%2Fyoutube.png&amp;fanart=none&amp;number=1</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">karaoke</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<label>$LOCALIZE[10004]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/Settings.jpg</icon>
+			<thumb />
+			<property name="labelID">settings</property>
+			<property name="defaultID">settings</property>
+			<property name="background">Settings.Art</property>
+			<onclick condition="StringCompare(Window(10000).Property(submenuVisibility),settings)">ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">settings</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+			<onclick>SetProperty(submenuVisibility,settings,10000)</onclick>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>My OSMC</label>
+			<label2>Program</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb>image://%2fusr%2fshare%2fkodi%2faddons%2fservice.osmc.settings%2ficon.png/</thumb>
+			<property name="labelID">service.osmc.settings</property>
+			<property name="defaultID">service.osmc.settings</property>
+			<property name="translatedPath">RunAddOn(service.osmc.settings)</property>
+			<onclick>RunAddOn(service.osmc.settings)</onclick>
+			<property name="path">RunAddOn(service.osmc.settings)</property>
+			<property name="list">RunAddOn(service.osmc.settings)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">settings</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[7]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">7</property>
+			<property name="defaultID">7</property>
+			<onclick>ActivateWindow(filemanager)</onclick>
+			<property name="path">ActivateWindow(filemanager)</property>
+			<property name="list">filemanager</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">settings</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[130]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">130</property>
+			<property name="defaultID">130</property>
+			<onclick>ActivateWindow(systeminfo)</onclick>
+			<property name="path">ActivateWindow(systeminfo)</property>
+			<property name="list">systeminfo</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">settings</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[13200]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">13200</property>
+			<property name="defaultID">13200</property>
+			<onclick>ActivateWindow(profiles)</onclick>
+			<property name="path">ActivateWindow(profiles)</property>
+			<property name="list">profiles</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">settings</property>
+		</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<label>Signage 1</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">signage1</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1199)</onclick>
+			<property name="path">ActivateWindow(1199)</property>
+			<property name="list">1199</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">signage1</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
+			<label>Signage 2</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">signage2</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1189)</onclick>
+			<property name="path">ActivateWindow(1189)</property>
+			<property name="list">1189</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">signage2</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-islamiccontent">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>Prayer Time</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">prayertime</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1180)</onclick>
+			<property name="path">ActivateWindow(1180)</property>
+			<property name="list">1180</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>Hadith Of The Day</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">hadithoftheday</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Al-Quran Recital</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">al-quranrecital</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(Music,special://musicplaylists/,return)</onclick>
+			<property name="path">ActivateWindow(Music,special://musicplaylists/,return)</property>
+			<property name="list">special://musicplaylists/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-islamiccontent">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>Prayer Time</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">prayertime</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1180)</onclick>
+			<property name="path">ActivateWindow(1180)</property>
+			<property name="list">1180</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),islamiccontent)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>Hadith Of The Day</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">hadithoftheday</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),islamiccontent)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Al-Quran Recital</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">al-quranrecital</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(Music,special://musicplaylists/,return)</onclick>
+			<property name="path">ActivateWindow(Music,special://musicplaylists/,return)</property>
+			<property name="list">special://musicplaylists/</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),islamiccontent)</visible>
+			<property name="group">islamiccontent</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-livetv">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>$LOCALIZE[19019]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19019</property>
+			<property name="defaultID">19019</property>
+			<visible>PVR.HasTVChannels</visible>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+			<property name="path">ActivateWindow(TVChannels)</property>
+			<property name="list">TVChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[22020]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>PVR.HasTVChannels</visible>
+			<onclick>ActivateWindow(TVGuide)</onclick>
+			<property name="path">ActivateWindow(TVGuide)</property>
+			<property name="list">TVGuide</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[19163]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>PVR.HasTVChannels</visible>
+			<onclick>ActivateWindow(TVRecordings)</onclick>
+			<property name="path">ActivateWindow(TVRecordings)</property>
+			<property name="list">TVRecordings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[19040]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>PVR.HasTVChannels</visible>
+			<onclick>ActivateWindow(TVTimers)</onclick>
+			<property name="path">ActivateWindow(TVTimers)</property>
+			<property name="list">TVTimers</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>$LOCALIZE[137]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>PVR.HasTVChannels</visible>
+			<onclick>ActivateWindow(TVSearch)</onclick>
+			<property name="path">ActivateWindow(TVSearch)</property>
+			<property name="list">TVSearch</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-livetv">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>$LOCALIZE[19019]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19019</property>
+			<property name="defaultID">19019</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+			<property name="path">ActivateWindow(TVChannels)</property>
+			<property name="list">TVChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[22020]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVGuide)</onclick>
+			<property name="path">ActivateWindow(TVGuide)</property>
+			<property name="list">TVGuide</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[19163]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVRecordings)</onclick>
+			<property name="path">ActivateWindow(TVRecordings)</property>
+			<property name="list">TVRecordings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[19040]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVTimers)</onclick>
+			<property name="path">ActivateWindow(TVTimers)</property>
+			<property name="list">TVTimers</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>$LOCALIZE[137]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),livetv)</visible>
+			<onclick>ActivateWindow(TVSearch)</onclick>
+			<property name="path">ActivateWindow(TVSearch)</property>
+			<property name="list">TVSearch</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">livetv</property>
+			<property name="widget">tvrecordings</property>
+			<property name="widgetPath">plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]</property>
+			<property name="widgetTarget">pvr</property>
+			<property name="widgetType">pvr</property>
+			<property name="widgetName">19017</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-welcome">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-welcome">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-plugin-audio-sgradio">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<onclick>ActivateWindow(Music,Artists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Artists,return)</property>
+			<property name="list">Artists</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[132]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">132</property>
+			<property name="defaultID">132</property>
+			<onclick>ActivateWindow(Music,Albums,return)</onclick>
+			<property name="path">ActivateWindow(Music,Albums,return)</property>
+			<property name="list">Albums</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[134]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">134</property>
+			<property name="defaultID">134</property>
+			<onclick>ActivateWindow(Music,Songs,return)</onclick>
+			<property name="path">ActivateWindow(Music,Songs,return)</property>
+			<property name="list">Songs</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[744]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">744</property>
+			<property name="defaultID">744</property>
+			<onclick>ActivateWindow(Music,Files,Return)</onclick>
+			<property name="path">ActivateWindow(Music,Files,Return)</property>
+			<property name="list">Files</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>$LOCALIZE[15100]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">15100</property>
+			<property name="defaultID">15100</property>
+			<onclick>ActivateWindow(Music,MusicLibrary,return)</onclick>
+			<property name="path">ActivateWindow(Music,MusicLibrary,return)</property>
+			<property name="list">MusicLibrary</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>$LOCALIZE[1038]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">1038</property>
+			<property name="defaultID">1038</property>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Music,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-plugin-audio-sgradio">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<onclick>ActivateWindow(Music,Artists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Artists,return)</property>
+			<property name="list">Artists</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[132]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">132</property>
+			<property name="defaultID">132</property>
+			<onclick>ActivateWindow(Music,Albums,return)</onclick>
+			<property name="path">ActivateWindow(Music,Albums,return)</property>
+			<property name="list">Albums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[134]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">134</property>
+			<property name="defaultID">134</property>
+			<onclick>ActivateWindow(Music,Songs,return)</onclick>
+			<property name="path">ActivateWindow(Music,Songs,return)</property>
+			<property name="list">Songs</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[744]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">744</property>
+			<property name="defaultID">744</property>
+			<onclick>ActivateWindow(Music,Files,Return)</onclick>
+			<property name="path">ActivateWindow(Music,Files,Return)</property>
+			<property name="list">Files</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>$LOCALIZE[15100]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">15100</property>
+			<property name="defaultID">15100</property>
+			<onclick>ActivateWindow(Music,MusicLibrary,return)</onclick>
+			<property name="path">ActivateWindow(Music,MusicLibrary,return)</property>
+			<property name="list">MusicLibrary</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>$LOCALIZE[1038]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">1038</property>
+			<property name="defaultID">1038</property>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Music,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-audio-sgradio)</visible>
+			<property name="group">plugin.audio.sgradio</property>
+			<property name="widget">Addon</property>
+			<property name="widgetTarget">music</property>
+			<property name="widgetPath">plugin://plugin.audio.sgradio?reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widgetType">audio</property>
+			<property name="widgetName">SingaporeRadio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-services">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>Dining</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">dining</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1197)</onclick>
+			<property name="path">ActivateWindow(1197)</property>
+			<property name="list">1197</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>Laundry</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">laundry</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1196)</onclick>
+			<property name="path">ActivateWindow(1196)</property>
+			<property name="list">1196</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Room Service</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">roomservice</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1195)</onclick>
+			<property name="path">ActivateWindow(1195)</property>
+			<property name="list">1195</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>Concierge</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">concierge</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1194)</onclick>
+			<property name="path">ActivateWindow(1194)</property>
+			<property name="list">1194</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>Enquiry</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">enquiry</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1193)</onclick>
+			<property name="path">ActivateWindow(1193)</property>
+			<property name="list">1193</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>Bulletin Board</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">bulletinboard</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1192)</onclick>
+			<property name="path">ActivateWindow(1192)</property>
+			<property name="list">1192</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-services">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>Dining</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">dining</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1197)</onclick>
+			<property name="path">ActivateWindow(1197)</property>
+			<property name="list">1197</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>Laundry</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">laundry</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1196)</onclick>
+			<property name="path">ActivateWindow(1196)</property>
+			<property name="list">1196</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Room Service</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">roomservice</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1195)</onclick>
+			<property name="path">ActivateWindow(1195)</property>
+			<property name="list">1195</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>Concierge</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">concierge</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1194)</onclick>
+			<property name="path">ActivateWindow(1194)</property>
+			<property name="list">1194</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>Enquiry</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">enquiry</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1193)</onclick>
+			<property name="path">ActivateWindow(1193)</property>
+			<property name="list">1193</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>Bulletin Board</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">bulletinboard</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(1192)</onclick>
+			<property name="path">ActivateWindow(1192)</property>
+			<property name="list">1192</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),services)</visible>
+			<property name="group">services</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-karaoke">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-karaoke">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-settings">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>My OSMC</label>
+			<label2>Program</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb>image://%2fusr%2fshare%2fkodi%2faddons%2fservice.osmc.settings%2ficon.png/</thumb>
+			<property name="labelID">service.osmc.settings</property>
+			<property name="defaultID">service.osmc.settings</property>
+			<property name="translatedPath">RunAddOn(service.osmc.settings)</property>
+			<onclick>RunAddOn(service.osmc.settings)</onclick>
+			<property name="path">RunAddOn(service.osmc.settings)</property>
+			<property name="list">RunAddOn(service.osmc.settings)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[7]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">7</property>
+			<property name="defaultID">7</property>
+			<onclick>ActivateWindow(filemanager)</onclick>
+			<property name="path">ActivateWindow(filemanager)</property>
+			<property name="list">filemanager</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[130]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">130</property>
+			<property name="defaultID">130</property>
+			<onclick>ActivateWindow(systeminfo)</onclick>
+			<property name="path">ActivateWindow(systeminfo)</property>
+			<property name="list">systeminfo</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[13200]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">13200</property>
+			<property name="defaultID">13200</property>
+			<onclick>ActivateWindow(profiles)</onclick>
+			<property name="path">ActivateWindow(profiles)</property>
+			<property name="list">profiles</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-settings">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>My OSMC</label>
+			<label2>Program</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb>image://%2fusr%2fshare%2fkodi%2faddons%2fservice.osmc.settings%2ficon.png/</thumb>
+			<property name="labelID">service.osmc.settings</property>
+			<property name="defaultID">service.osmc.settings</property>
+			<property name="translatedPath">RunAddOn(service.osmc.settings)</property>
+			<onclick>RunAddOn(service.osmc.settings)</onclick>
+			<property name="path">RunAddOn(service.osmc.settings)</property>
+			<property name="list">RunAddOn(service.osmc.settings)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[7]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">7</property>
+			<property name="defaultID">7</property>
+			<onclick>ActivateWindow(filemanager)</onclick>
+			<property name="path">ActivateWindow(filemanager)</property>
+			<property name="list">filemanager</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[130]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">130</property>
+			<property name="defaultID">130</property>
+			<onclick>ActivateWindow(systeminfo)</onclick>
+			<property name="path">ActivateWindow(systeminfo)</property>
+			<property name="list">systeminfo</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>$LOCALIZE[13200]</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/backgrounds/default/default.jpg</icon>
+			<thumb />
+			<property name="labelID">13200</property>
+			<property name="defaultID">13200</property>
+			<onclick>ActivateWindow(profiles)</onclick>
+			<property name="path">ActivateWindow(profiles)</property>
+			<property name="list">profiles</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-signage1">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-signage1">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-signage2">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-signage2">
+		<description>No items</description>
+	</include>
+</includes>

@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="DiningContent">
+        <content>
+            <!-- NO DATA-->
+            <item>
+                <visible>!Weather.IsFetched</visible>
+                <label>$LOCALIZE[416]</label>
+                <thumb>$VAR[WeatherFanartPath]na.jpg</thumb>
+                <onclick>noop</onclick>
+            </item>
+            <!--7 DAYS-->
+            <item>
+                <visible>Skin.String(WeatherType,)|Skin.String(WeatherType,daily)</visible>
+                <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day0.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                <label>$LOCALIZE[33006]</label>
+                <!-- <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Current.FanartCode)].jpg</thumb> -->
+                <thumb>http://127.0.0.1/adatv/sushi.jpg</thumb>
+                <property name="Icon">$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Current.FanartCode)].png</property>
+                <property name="Property1">$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property2">$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property3">$INFO[Window(Weather).Property(Current.Condition)]</property>
+                <property name="Property4">$LOCALIZE[143] $INFO[Window.Property(Current.Temperature)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property5">$LOCALIZE[405]: $INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property6">$LOCALIZE[403]: $INFO[Window.Property(Current.UVIndex)]</property>
+                <property name="Property7">$LOCALIZE[402]: $INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property8">$LOCALIZE[406]: $INFO[Window.Property(Current.Humidity)]</property>
+                <property name="Property9">$LOCALIZE[404]: $INFO[Window.Property(Current.Wind)]</property>
+                <property name="Property10">$LOCALIZE[33027]: $INFO[Window.Property(Today.Sunrise)]</property>
+                <property name="Property11">$LOCALIZE[33028]: $INFO[Window.Property(Today.Sunset)]</property>
+                <onclick>noop</onclick>
+            </item>
+            <item>
+                <visible>Skin.String(WeatherType,)|Skin.String(WeatherType,daily)</visible>
+                <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day1.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                <label>$LOCALIZE[33007]</label>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day1.FanartCode)].jpg</thumb>
+                <property name="Icon">$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day1.FanartCode)].png</property>
+                <property name="Property1">$INFO[Window.Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property2">$INFO[Window.Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property3">$INFO[Window(Weather).Property(Day1.Outlook)]</property>
+                <onclick>noop</onclick>
+            </item>
+            <item>
+                <visible>Skin.String(WeatherType,)|Skin.String(WeatherType,daily)</visible>
+                <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day2.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                <label>$INFO[Window.Property(Day2.Title)]</label>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day2.FanartCode)].jpg</thumb>
+                <property name="Icon">$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day2.FanartCode)].png</property>
+                <property name="Property1">$INFO[Window.Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property2">$INFO[Window.Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property3">$INFO[Window(Weather).Property(Day2.Outlook)]</property>
+                <onclick>noop</onclick>
+            </item>
+            <item>
+                <visible>Skin.String(WeatherType,)|Skin.String(WeatherType,daily)</visible>
+                <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day3.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                <label>$INFO[Window.Property(Day3.Title)]</label>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day3.FanartCode)].jpg</thumb>
+                <property name="Icon">$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day3.FanartCode)].png</property>
+                <property name="Property1">$INFO[Window.Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property2">$INFO[Window.Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property3">$INFO[Window(Weather).Property(Day3.Outlook)]</property>
+                <onclick>noop</onclick>
+            </item>
+            <item>
+                <visible>Skin.String(WeatherType,)|Skin.String(WeatherType,daily)</visible>
+                <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day4.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                <label>$INFO[Window.Property(Day4.Title)]</label>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day4.FanartCode)].jpg</thumb>
+                <property name="Icon">$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day4.FanartCode)].png</property>
+                <property name="Property1">$INFO[Window.Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property2">$INFO[Window.Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property3">$INFO[Window(Weather).Property(Day4.Outlook)]</property>
+                <onclick>noop</onclick>
+            </item>
+            <item>
+                <visible>Skin.String(WeatherType,)|Skin.String(WeatherType,daily)</visible>
+                <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day5.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                <label>$INFO[Window(Weather).Property(Day5.Title)]</label>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day5.FanartCode)].jpg</thumb>
+                <property name="Icon">$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day5.FanartCode)].png</property>
+                <property name="Property1">$INFO[Window.Property(Day5.HighTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property2">$INFO[Window.Property(Day5.LowTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property3">$INFO[Window(Weather).Property(Day5.Outlook)]</property>
+                <onclick>noop</onclick>
+            </item>
+            <item>
+                <visible>Skin.String(WeatherType,)|Skin.String(WeatherType,daily)</visible>
+                <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day6.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                <label>$INFO[Window(Weather).Property(Day6.Title)]</label>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day6.FanartCode)].jpg</thumb>
+                <property name="Icon">$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day6.FanartCode)].png</property>
+                <property name="Property1">$INFO[Window.Property(Day6.HighTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property2">$INFO[Window.Property(Day6.LowTemp)]$INFO[System.TemperatureUnits]</property>
+                <property name="Property3">$INFO[Window(Weather).Property(Day6.Outlook)]</property>
+                <onclick>noop</onclick>
+            </item>
+        </content>
+    </include>
+    <include name="Info_50_Dining_BG">
+        <control type="group">
+            <posx>145</posx>
+            <posy>115</posy>
+            <control type="image">
+                <posx>-21</posx>
+                <posy>0</posy>
+                <width>1683</width>
+                <height>950</height>
+                <texture border="90">common/bg_tvguide.png</texture>
+            </control>
+            <control type="image">
+                <posx>212</posx>
+                <posy>49</posy>
+                <height>855</height>
+                <width>250</width>
+                <texture>list/bg_strip_horizontal_left.png</texture>
+                <colordiffuse>90ffffff</colordiffuse>
+            </control>
+            <!-- List vertical border -->
+            <control type="image">
+                <posx>463</posx>
+                <posy>49</posy>
+                <width>2</width>
+                <height>855</height>
+                <texture>list/bg_facade_vertical.png</texture>
+            </control>
+            <!-- Side Thumbnail -->
+            <control type="image">
+                <posx>18</posx>
+                <posy>61</posy>
+                <width>440</width>
+                <height>833</height>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$INFO[Container(50).ListItem.Thumb]</texture>
+                <include>ThumbBorder</include>
+            </control>
+        </control>
+        <control type="group">
+            <posx>609</posx>
+            <posy>186</posy>
+            <!-- Title atas list -->
+            <control type="label">
+                <posx>TextMargin</posx>
+                <posy>-12</posy>
+                <width>660</width>
+                <height>42</height>
+                <font>InfoTitleFont</font>
+                <textcolor>MainColor</textcolor>
+                <align>left</align>
+                <label>This Week's Menu</label>
+            </control>
+            <!-- Sub title bawah title atas list -->
+            <control type="label" id="11">
+                <posx>TextMargin</posx>
+                <posy>30</posy>
+                <width>660</width>
+                <height>40</height>
+                <font>InfoTitleSubFont</font>
+                <textcolor>AlternateColor</textcolor>
+                <align>left</align>
+<!--                 <label>sini sub</label> -->
+            </control>
+            <!-- First item list left with top border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1152</width>
+                <height>73</height>
+                <texture border="3">list/bg_facade_nofocus_top.png</texture>
+            </control>
+            <control type="label">
+                <posx>TextMargin</posx>
+                <posy>73</posy>
+                <width>660</width>
+                <height>71</height>
+                <font>InfoDetailsFont</font>
+                <textcolor>AlternateColor</textcolor>
+                <label>$INFO[Container(50).ListItem.Property(Property3)]</label>
+            </control>
+            <!-- Second item list left with top border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>73</posy>
+                <width>576</width>
+                <height>73</height>
+                <texture border="3">list/bg_facade_nofocus_top.png</texture>
+            </control>
+            <control type="label">
+                <visible>![IsEmpty(Container(50).ListItem.Property(Property4))+IsEmpty(Container(50).ListItem.Property(Property8))]</visible>
+                <posx>TextMargin</posx>
+                <posy>146</posy>
+                <width>660</width>
+                <height>71</height>
+                <font>InfoDetailsFont</font>
+                <textcolor>MainColor</textcolor>
+                <label>$INFO[Container(50).ListItem.Property(Property4)]</label>
+            </control>
+            <control type="label">
+                <visible>[IsEmpty(Container(50).ListItem.Property(Property4))+IsEmpty(Container(50).ListItem.Property(Property8))]</visible>
+                <posx>TextMargin</posx>
+                <posy>146</posy>
+                <width>660</width>
+                <height>71</height>
+                <font>InfoDetailsFont</font>
+                <textcolor>MainColor</textcolor>
+                <label>$INFO[Container(50).ListItem.Property(Property1),$LOCALIZE[393]: ]</label>
+            </control>
+            <!-- Third item list left with top border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>146</posy>
+                <width>576</width>
+                <height>73</height>
+                <texture border="3">list/bg_facade_nofocus_top.png</texture>
+            </control>
+            <control type="label">
+                <visible>![IsEmpty(Container(50).ListItem.Property(Property4))+IsEmpty(Container(50).ListItem.Property(Property8))]</visible>
+                <posx>TextMargin</posx>
+                <posy>219</posy>
+                <width>660</width>
+                <height>71</height>
+                <font>InfoDetailsFont</font>
+                <textcolor>AlternateColor</textcolor>
+                <label>$INFO[Container(50).ListItem.Property(Property8)]</label>
+            </control>
+            <control type="label">
+                <visible>[IsEmpty(Container(50).ListItem.Property(Property4))+IsEmpty(Container(50).ListItem.Property(Property8))]</visible>
+                <posx>TextMargin</posx>
+                <posy>219</posy>
+                <width>660</width>
+                <height>71</height>
+                <font>InfoDetailsFont</font>
+                <textcolor>AlternateColor</textcolor>
+                <label>$INFO[Container(50).ListItem.Property(Property2),$LOCALIZE[391]: ]</label>
+            </control>
+            <!-- Fourth item list left with top border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>219</posy>
+                <width>576</width>
+                <height>73</height>
+                <texture border="3">list/bg_facade_nofocus_top.png</texture>
+            </control>
+            <control type="label">
+                <posx>TextMargin</posx>
+                <posy>292</posy>
+                <width>660</width>
+                <height>71</height>
+                <font>InfoDetailsFont</font>
+                <textcolor>MainColor</textcolor>
+                <label>$INFO[Container(50).ListItem.Property(Property9)]</label>
+            </control>
+            <!-- Fifth item list left with top border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>292</posy>
+                <width>576</width>
+                <height>73</height>
+                <texture border="3">list/bg_facade_nofocus_top.png</texture>
+            </control>
+            <control type="label">
+                <posx>TextMargin</posx>
+                <posy>365</posy>
+                <width>660</width>
+                <height>71</height>
+                <font>InfoDetailsFont</font>
+                <textcolor>AlternateColor</textcolor>
+                <label>$INFO[Container(50).ListItem.Property(Property5)]</label>
+            </control>
+            <!-- Sixth item list left with top border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>365</posy>
+                <width>576</width>
+                <height>73</height>
+                <texture border="3">list/bg_facade_nofocus_top.png</texture>
+            </control>
+            <control type="label">
+                <posx>TextMargin</posx>
+                <posy>438</posy>
+                <width>660</width>
+                <height>71</height>
+                <font>InfoDetailsFont</font>
+                <textcolor>MainColor</textcolor>
+                <label>$INFO[Container(50).ListItem.Property(Property7)]</label>
+            </control>
+            <!-- Seventh item list left with top border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>438</posy>
+                <width>576</width>
+                <height>73</height>
+                <texture border="3">list/bg_facade_nofocus_top.png</texture>
+            </control>
+            <control type="label">
+                <posx>TextMargin</posx>
+                <posy>511</posy>
+                <width>660</width>
+                <height>71</height>
+                <font>InfoDetailsFont</font>
+                <textcolor>AlternateColor</textcolor>
+                <label>$INFO[Container(50).ListItem.Property(Property10)]</label>
+            </control>
+            <!-- Eighth item list left with top border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>511</posy>
+                <width>576</width>
+                <height>73</height>
+                <texture border="3">list/bg_facade_nofocus_top.png</texture>
+            </control>
+            <control type="label">
+                <posx>TextMargin</posx>
+                <posy>584</posy>
+                <width>660</width>
+                <height>71</height>
+                <font>InfoDetailsFont</font>
+                <textcolor>MainColor</textcolor>
+                <label>$INFO[Container(50).ListItem.Property(Property11)]</label>
+            </control>
+            <!-- Ending border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>584</posy>
+                <width>576</width>
+                <height>73</height>
+                <texture border="3">list/bg_facade_nofocus_top.png</texture>
+            </control>
+            <!-- End left list -->
+        </control>
+    </include>
+    <include name="List_Layout_Dining_BG">
+    		<!-- Right List item off focus each line -->
+        <itemlayout height="146" width="576">
+        		<!-- BG lines & shadow -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>73</posy>
+                <width>576</width>
+                <height>73</height>
+                <texture border="3">list/bg_facade_nofocus.png</texture>
+            </control>
+            <!-- Main Label -->
+            <control type="label">
+                <posx>30</posx>
+                <posy>0</posy>
+                <height>71</height>
+                <width>350</width>
+                <font>InfoDetailsFont</font>
+                <textcolor>ListNoFocusColor</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+                <scroll>false</scroll>
+            </control>
+            <!-- High Temp -->
+            <control type="label">
+                <posx>30</posx>
+                <posy>73</posy>
+                <height>71</height>
+                <width>255</width>
+                <font>InfoDetailsFont</font>
+                <textcolor>SublistNoFocusColor</textcolor>
+                <label>$INFO[ListItem.Property(Property1)]</label>
+                <scroll>false</scroll>
+            </control>
+            <!-- Low Temp -->
+            <control type="label">
+                <posx>230</posx>
+                <posy>73</posy>
+                <height>71</height>
+                <width>255</width>
+                <font>InfoDetailsFont</font>
+                <textcolor>ListNoFocusColor</textcolor>
+                <label>$INFO[ListItem.Property(Property2)]</label>
+                <scroll>false</scroll>
+            </control>
+            <!-- Right Icon -->
+            <control type="image">
+                <posx>410</posx>
+                <posy>0</posy>
+                <height>144</height>
+                <width>144</width>
+                <texture>$INFO[ListItem.Property(Icon)]</texture>
+                <aspectratio>keep</aspectratio>
+            </control>
+        </itemlayout>
+         <!-- Right List item on focus each line -->
+        <focusedlayout height="146" width="576">
+        		<!-- Button onfocus image -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <height>146</height>
+                <width>576</width>
+                <include>FacadeFocus</include>
+            </control>
+            <!-- Main Title -->
+            <control type="label">
+                <posx>30</posx>
+                <posy>0</posy>
+                <height>71</height>
+                <width>350</width>
+                <font>InfoDetailsFont</font>
+                <textcolor>ListFocusColor</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+            <!-- High Temp -->
+            <control type="label">
+                <posx>30</posx>
+                <posy>73</posy>
+                <height>71</height>
+                <width>255</width>
+                <font>InfoDetailsFont</font>
+                <textcolor>SublistFocusColor</textcolor>
+                <label>$INFO[ListItem.Property(Property1)]</label>
+            </control>
+            <!-- Low Temp -->
+            <control type="label">
+                <posx>230</posx>
+                <posy>73</posy>
+                <height>71</height>
+                <width>255</width>
+                <font>InfoDetailsFont</font>
+                <textcolor>ListFocusColor</textcolor>
+                <label>$INFO[ListItem.Property(Property2)]</label>
+            </control>
+            <!-- Right Icon -->
+            <control type="image">
+                <posx>410</posx>
+                <posy>0</posy>
+                <height>144</height>
+                <width>144</width>
+                <texture>$INFO[ListItem.Property(Icon)]</texture>
+                <aspectratio>keep</aspectratio>
+            </control>
+        </focusedlayout>
+    </include>
+    <include name="View_50_Dining_BG">
+        <control type="group">
+            <posx>1185</posx>
+            <posy>259</posy>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <height>760</height>
+                <width>250</width>
+                <texture flipx="true">list/bg_strip_horizontal_left.png</texture>
+                <colordiffuse>90ffffff</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>2</width>
+                <height>760</height>
+                <texture>list/bg_facade_vertical.png</texture>
+            </control>
+            <control type="list" id="50">
+                <viewtype label="31092">Low List</viewtype>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>576</width>
+                <height>730</height>
+                <onleft>9000</onleft>
+                <onright>60</onright>
+                <onup>50</onup>
+                <ondown>50</ondown>
+                <pagecontrol>60</pagecontrol>
+                <preloaditems>4</preloaditems>
+                <include>List_Layout_Dining_BG</include>
+                <include>DiningContent</include>
+            </control>
+            <control type="scrollbar" id="60">
+                <posx>545</posx>
+                <posy>0</posy>
+                <height>730</height>
+                <include>VerticalScroller</include>
+                <onleft>50</onleft>
+                <onright>505050</onright>
+            </control>
+        </control>
+    </include>
+</includes>
